@@ -16,7 +16,7 @@ Inspired from a reddit post: [link](https://old.reddit.com/r/swaywm/comments/tsv
   - Set 1's workspaces start at 11 up to 20.
   - Set 2's workspaces start at 21 up to 30.
   - Set 3 follows the same.
-  - Able to add more sets with names or numbers. 
+  - Or add more sets with names or numbers. 
     - For example:
     ```
     # switch workroom
