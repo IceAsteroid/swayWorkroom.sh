@@ -27,7 +27,9 @@ Inspired from a reddit post: [link](https://old.reddit.com/r/swaywm/comments/tsv
     ```
 - Workflow
   - Keybindings
-    - Move to set 1, 2, 3 by keybindings Ctrl+Alt+q, Ctrl+Alt+w, Ctrl+Alt+e, respectively.
+    - Move to number-named sets 1, 2, 3 by keybindings of choice.
+    - Or sets named with non-number by keybindings of choice.
+    - Number & non-number named sets can be specified wihout problems.
   - Inherit digits
     - When moving to another set, for example, from set 1 to set 2, and you're in 13, the workspace to switch to, will be 23. And 20 will be 30, etc.
 - Container moving functionality
@@ -36,7 +38,7 @@ Inspired from a reddit post: [link](https://old.reddit.com/r/swaywm/comments/tsv
 # How to use
 1. Download the script, and put it to the directory of choice.
 
-2. Comment out all lines related to workspace actions in sway, as belows:
+2. Comment out all lines related to workspace actions in sway, for example, as belows:
 ```
 ## Workspaces:
 #
