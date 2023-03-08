@@ -108,4 +108,4 @@ Inspired from a reddit post: [link](https://old.reddit.com/r/swaywm/comments/tsv
 3. Refresh sway and you're good to go. :)
   
 # Contribution
-  Just post an issue, if you encounter any problems. I'll fix it if I can when I feel not bad.
+  Just post an issue, if you encounter any problems. I'll fix them if I can when I feel not bad.
