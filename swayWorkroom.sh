@@ -54,12 +54,21 @@ if [[ -v 2 && ! "${2}" = 0 ]]; then
 else
   #workspaceToSwitch="$(cat ${workroomWorkspaceSwitchedFile})"
   if [ "${2}" = 0 ]; then
-    swaymsg "workspace $((${workroomToSwitch} + 1))0"; echo "0" > ${workroomWorkspaceSwitchedFile}
+    if [[ "${workroomToSwitch}" =~ ^[0-9]+$ ]]; then
+      swaymsg "workspace $((${workroomToSwitch} + 1))0"; echo "0" > ${workroomWorkspaceSwitchedFile}
+    else
+      swaymsg "workspace ${workroomToSwitch}0"; echo "0" > ${workroomWorkspaceSwitchedFile}
+    fi
   else
     if [ "${workspaceToSwitch}" = 0 ]; then
-      swaymsg "workspace $((${workroomToSwitch} + 1))0"; echo "0" > ${workroomWorkspaceSwitchedFile}
+      if [[ "${workroomToSwitch}" =~ ^[0-9]+$ ]]; then
+        swaymsg "workspace $((${workroomToSwitch} + 1))0"; echo "0" > ${workroomWorkspaceSwitchedFile}
+      else
+        swaymsg "workspace ${workroomToSwitch}0"; echo "0" > ${workroomWorkspaceSwitchedFile}
+      fi
     else
       swaymsg "workspace ${workroomToSwitch}${workspaceToSwitch}"
     fi
   fi
 fi
+    
