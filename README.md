@@ -8,6 +8,7 @@ Inspired from a reddit post: [link](https://old.reddit.com/r/swaywm/comments/tsv
 
 # Enhancements
 - Intuitive workspace numbering, for example, 11 to 20, instead of 11 to 19, as implementing Workroom only in Sway has this limitation.
+- Unlimited sets just to set corresponding keybindings in Sway conf, without modifying the script.
 - Added container moving functionality to use with Workroom.
 
 # Features
@@ -15,7 +16,15 @@ Inspired from a reddit post: [link](https://old.reddit.com/r/swaywm/comments/tsv
   - Set 1's workspaces start at 11 up to 20.
   - Set 2's workspaces start at 21 up to 30.
   - Set 3 follows the same.
-  - Possible to add more sets just by simply modifying the script a bit.
+  - Able to add more sets with names or numbers. 
+    - For example:
+    ```
+    # switch workroom
+    bindsym Alt+Shift+q exec "${HOME}/xxx/swayWorkroom.sh <setName1>"
+    bindsym Alt+Shift+w exec "${HOME}/xxx/swayWorkroom.sh <setName2>"
+    bindsym Alt+Shift+e exec "${HOME}/xxx/swayWorkroom.sh <setName3>"
+    #... more sets
+    ```
 - Workflow
   - Keybindings
     - Move to set 1, 2, 3 by keybindings Ctrl+Alt+q, Ctrl+Alt+w, Ctrl+Alt+e, respectively.
@@ -65,34 +74,34 @@ Inspired from a reddit post: [link](https://old.reddit.com/r/swaywm/comments/tsv
     exec echo 1 > $workroomTmpFile
 
     # switch workroom
-    bindsym Alt+Shift+q exec "${HOME}/xxx/swayWorkroom.sh -q"
-    bindsym Alt+Shift+w exec "${HOME}/xxx/swayWorkroom.sh -w"
-    bindsym Alt+Shift+e exec "${HOME}/xxx/swayWorkroom.sh -e"
+    bindsym Alt+Shift+q exec "${HOME}/xxx/swayWorkroom.sh <workroomName1>"
+    bindsym Alt+Shift+w exec "${HOME}/xxx/swayWorkroom.sh <workroomName2>"
+    bindsym Alt+Shift+e exec "${HOME}/xxx/swayWorkroom.sh <workroomName3>"
 
     # Navigate
-    bindsym $mod+Escape exec "${HOME}/Bin/swayWorkroom.sh -x 1"
-    bindsym $mod+1 exec "${HOME}/xxx/swayWorkroom.sh -x 1"
-    bindsym $mod+2 exec "${HOME}/xxx/swayWorkroom.sh -x 2"
-    bindsym $mod+3 exec "${HOME}/xxx/swayWorkroom.sh -x 3"
-    bindsym $mod+4 exec "${HOME}/xxx/swayWorkroom.sh -x 4"
-    bindsym $mod+5 exec "${HOME}/xxx/swayWorkroom.sh -x 5"
-    bindsym $mod+6 exec "${HOME}/xxx/swayWorkroom.sh -x 6"
-    bindsym $mod+7 exec "${HOME}/xxx/swayWorkroom.sh -x 7"
-    bindsym $mod+8 exec "${HOME}/xxx/swayWorkroom.sh -x 8"
-    bindsym $mod+9 exec "${HOME}/xxx/swayWorkroom.sh -x 9"
-    bindsym $mod+0 exec "${HOME}/xxx/swayWorkroom.sh -x 0"
+    bindsym $mod+Escape exec "${HOME}/Bin/swayWorkroom.sh x 1"
+    bindsym $mod+1 exec "${HOME}/xxx/swayWorkroom.sh x 1"
+    bindsym $mod+2 exec "${HOME}/xxx/swayWorkroom.sh x 2"
+    bindsym $mod+3 exec "${HOME}/xxx/swayWorkroom.sh x 3"
+    bindsym $mod+4 exec "${HOME}/xxx/swayWorkroom.sh x 4"
+    bindsym $mod+5 exec "${HOME}/xxx/swayWorkroom.sh x 5"
+    bindsym $mod+6 exec "${HOME}/xxx/swayWorkroom.sh x 6"
+    bindsym $mod+7 exec "${HOME}/xxx/swayWorkroom.sh x 7"
+    bindsym $mod+8 exec "${HOME}/xxx/swayWorkroom.sh x 8"
+    bindsym $mod+9 exec "${HOME}/xxx/swayWorkroom.sh x 9"
+    bindsym $mod+0 exec "${HOME}/xxx/swayWorkroom.sh x 0"
 
     # Move focused container to workspace
-    bindsym $mod+Shift+1 exec "${HOME}/xxx/swayWorkroom.sh -x --to1"
-    bindsym $mod+Shift+2 exec "${HOME}/xxx/swayWorkroom.sh -x --to2"
-    bindsym $mod+Shift+3 exec "${HOME}/xxx/swayWorkroom.sh -x --to3"
-    bindsym $mod+Shift+4 exec "${HOME}/xxx/swayWorkroom.sh -x --to4"
-    bindsym $mod+Shift+5 exec "${HOME}/xxx/swayWorkroom.sh -x --to5"
-    bindsym $mod+Shift+6 exec "${HOME}/xxx/swayWorkroom.sh -x --to6"
-    bindsym $mod+Shift+7 exec "${HOME}/xxx/swayWorkroom.sh -x --to7"
-    bindsym $mod+Shift+8 exec "${HOME}/xxx/swayWorkroom.sh -x --to8"
-    bindsym $mod+Shift+9 exec "${HOME}/xxx/swayWorkroom.sh -x --to9"
-    bindsym $mod+Shift+0 exec "${HOME}/xxx/swayWorkroom.sh -x --to0"
+    bindsym $mod+Shift+1 exec "${HOME}/xxx/swayWorkroom.sh x --to1"
+    bindsym $mod+Shift+2 exec "${HOME}/xxx/swayWorkroom.sh x --to2"
+    bindsym $mod+Shift+3 exec "${HOME}/xxx/swayWorkroom.sh x --to3"
+    bindsym $mod+Shift+4 exec "${HOME}/xxx/swayWorkroom.sh x --to4"
+    bindsym $mod+Shift+5 exec "${HOME}/xxx/swayWorkroom.sh x --to5"
+    bindsym $mod+Shift+6 exec "${HOME}/xxx/swayWorkroom.sh x --to6"
+    bindsym $mod+Shift+7 exec "${HOME}/xxx/swayWorkroom.sh x --to7"
+    bindsym $mod+Shift+8 exec "${HOME}/xxx/swayWorkroom.sh x --to8"
+    bindsym $mod+Shift+9 exec "${HOME}/xxx/swayWorkroom.sh x --to9"
+    bindsym $mod+Shift+0 exec "${HOME}/xxx/swayWorkroom.sh x --to0"
 ```
 3. Refresh sway and you're good to go. :)
   
