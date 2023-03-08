@@ -40,16 +40,18 @@ if [[ -v 2 && ! "${2}" = 0 ]]; then
        echo "8" > ${workroomWorkspaceSwitchedFile};;
     9) swaymsg "workspace ${workroomToSwitch}9";
        echo "9" > ${workroomWorkspaceSwitchedFile};;
-    --to1) swaymsg "move container to workspace number ${workroomToSwitch}1";;
-    --to2) swaymsg "move container to workspace number ${workroomToSwitch}2";;
-    --to3) swaymsg "move container to workspace number ${workroomToSwitch}3";;
-    --to4) swaymsg "move container to workspace number ${workroomToSwitch}4";;
-    --to5) swaymsg "move container to workspace number ${workroomToSwitch}5";;
-    --to6) swaymsg "move container to workspace number ${workroomToSwitch}6";;
-    --to7) swaymsg "move container to workspace number ${workroomToSwitch}7";;
-    --to8) swaymsg "move container to workspace number ${workroomToSwitch}8";;
-    --to9) swaymsg "move container to workspace number ${workroomToSwitch}9";;
-    --to0) swaymsg "move container to workspace number $((${workroomToSwitch} + 1))0";;
+    --to1) swaymsg "move container to workspace ${workroomToSwitch}1";;
+    --to2) swaymsg "move container to workspace ${workroomToSwitch}2";;
+    --to3) swaymsg "move container to workspace ${workroomToSwitch}3";;
+    --to4) swaymsg "move container to workspace ${workroomToSwitch}4";;
+    --to5) swaymsg "move container to workspace ${workroomToSwitch}5";;
+    --to6) swaymsg "move container to workspace ${workroomToSwitch}6";;
+    --to7) swaymsg "move container to workspace ${workroomToSwitch}7";;
+    --to8) swaymsg "move container to workspace ${workroomToSwitch}8";;
+    --to9) swaymsg "move container to workspace ${workroomToSwitch}9";;
+    --to0) [[ "${workroomToSwitch}" =~ ^[0-9]+$ ]] \
+             && swaymsg "move container to workspace $((${workroomToSwitch} + 1))0" \
+             || swaymsg "move container to workspace ${workroomToSwitch}0";;
   esac
 else
   #workspaceToSwitch="$(cat ${workroomWorkspaceSwitchedFile})"
