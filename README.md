@@ -3,6 +3,9 @@ A script to implementing more than one set of 1-10 workspaces in Sway.
 
 Inspired from a reddit post: [link](https://old.reddit.com/r/swaywm/comments/tsvydv/workrooms_a_set_of_workspaces/), but with enhancements.
 
+# Demo
+![demoGif](https://user-images.githubusercontent.com/90975914/223832751-40b71822-d6d3-4378-85fe-b18f30c96d79.gif)
+
 # Enhancements
 - Intuitive workspace numbering, for example, 10 to 20, instead of 11 to 19, as implementing Workroom only in Sway has this limitation.
 - Added container moving functionality to use with Workroom.
