@@ -29,7 +29,7 @@ Inspired from a reddit post: [link](https://old.reddit.com/r/swaywm/comments/tsv
   - Keybindings
     - Move to number-named sets 1, 2, 3 by keybindings of choice.
     - Or sets named with non-number by keybindings of choice.
-    - Number & non-number named sets can be specified wihout problems.
+    - Number & non-number named sets can be specified respectively wihout problems.
   - Inherit digits
     - When moving to another set, for example, from set 1 to set 2, and you're in 13, the workspace to switch to, will be 23. And 20 will be 30, etc.
 - Container moving functionality
