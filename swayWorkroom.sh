@@ -14,16 +14,10 @@ workroomWorkspaceSwitchedFile="${swayScriptsTmpDir}/swayWorkroomWorkspaceSwitche
 workspaceToSwitch="$(cat ${workroomWorkspaceSwitchedFile})"
 
 case ${1} in
-  -q) echo "1" > ${workroomSwitchedFile}
+  x) workroomToSwitch="$(cat ${workroomSwitchedFile})";;
+  *) echo "${1}" > ${workroomSwitchedFile}
       workroomToSwitch="$(cat ${workroomSwitchedFile})"
       swaymsg "workspace ${workroomToSwitch}${workspaceToSwitch}";;
-  -w) echo "2" > ${workroomSwitchedFile}
-      workroomToSwitch="$(cat ${workroomSwitchedFile})"
-      swaymsg "workspace ${workroomToSwitch}${workspaceToSwitch}";;
-  -e) echo "3" > ${workroomSwitchedFile}
-      workroomToSwitch="$(cat ${workroomSwitchedFile})"
-      swaymsg "workspace ${workroomToSwitch}${workspaceToSwitch}";;
-  -x) workroomToSwitch="$(cat ${workroomSwitchedFile})";;
 esac
 
 if [[ -v 2 && ! "${2}" = 0 ]]; then
@@ -69,4 +63,3 @@ else
     fi
   fi
 fi
-    
