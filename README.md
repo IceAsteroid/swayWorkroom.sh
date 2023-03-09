@@ -1,5 +1,5 @@
 # swayWorkroom.sh
-A script to implementing more than one set of 1-10 workspaces in Sway.
+A script of implementing more than one set of 1-10 workspaces in Sway.
 
 Inspired from a reddit post: [link](https://old.reddit.com/r/swaywm/comments/tsvydv/workrooms_a_set_of_workspaces/), but with enhancements.
 
