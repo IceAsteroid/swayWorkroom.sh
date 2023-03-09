@@ -30,7 +30,7 @@ Inspired from a reddit post: [link](https://old.reddit.com/r/swaywm/comments/tsv
     - Move to number-named sets 1, 2, 3 by keybindings of choice.
     - Or sets named with non-number by keybindings of choice.
     - Number & non-number named sets can be specified respectively wihout problems.
-  - Inherit digits
+  - Inheriting digits
     - When moving to another set, for example, from set 1 to set 2, and you're in 13, the workspace to switch to, will be 23. And 20 will be 30, etc.
       - For example, you're on a browser for a certain task, now more browsers for different tasks are desired, you can just switch to other sets to open more browsers, since, when you switch to a set, its workspace's digit will be exactly the one as to other sets, so there's not need to find those workspaces which contain browsers in Sway, all you need to just simply switch to other sets.
         - Say that you choose to open up browsers for task A in workspace 13, now more browsers for tasks B, C, are needed. You can just switch to other sets, for example, switch to set 2, 3, will be 23, 33, respectively. This is just too clean and good, now I cannot live without this. :)
