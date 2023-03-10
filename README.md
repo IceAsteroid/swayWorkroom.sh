@@ -33,7 +33,7 @@ Inspired from a reddit post: [link](https://old.reddit.com/r/swaywm/comments/tsv
   - Inheriting digits
     - When moving to another set, for example, from set 1 to set 2, and you're in 13, the workspace to switch to, will be 23. And 20 will be 30, etc.
       - For example, you're on a browser for a certain task, now more browser  instances for different tasks are desired, you can just switch to other sets to open more instances, since, when you switch to a set, the workspace's digit will be exactly the one as to other sets, so there's not need to find those workspaces which contain browser instances in Sway, all you need to do is just simply switch to other sets.
-        - Say that you choose to open up browsers for task A in workspace 13, now more instances for tasks B, C, are needed. You can just switch to other sets, for example, switch to set 2, 3, will be 23, 33, respectively. This is just too clean and good, now I cannot live without this. :)
+      - Say that you choose to open up browsers for task A in workspace 13, now more instances for tasks B, C, are needed. You can just switch to other sets, for example, switch to set 2, 3, will be 23, 33, respectively. This is just too clean and good, now I cannot live without this. :)
 - Container moving functionality
   - Added container moving support, but it only allows containers to move only inside of the set they're in.
 
