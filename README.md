@@ -7,7 +7,7 @@ Inspired from a reddit post: [link](https://old.reddit.com/r/swaywm/comments/tsv
 ![demoGif](https://user-images.githubusercontent.com/90975914/223832751-40b71822-d6d3-4378-85fe-b18f30c96d79.gif)
 
 # Enhancements
-- Intuitive workspace numbering, for example, 11 to 20, instead of 11 to 19, as implementing Workroom only in Sway has this limitation.
+- Intuitive workspace numbering, for example, 11 to 20, instead of 11 to 19, as implementing Workroom only in Sway conf file has this limitation.
 - Unlimited sets just to set corresponding keybindings in Sway conf, without the need to modify the script.
 - Added container moving functionality to use with Workroom.
 
