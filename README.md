@@ -36,7 +36,7 @@ Inspired from a reddit post: [link](https://old.reddit.com/r/swaywm/comments/tsv
       - Say that you choose to open up browsers for task A in workspace 13, now more instances for tasks B, C, are needed. You can just switch to other sets, for example, switch to set 2, 3, will be 23, 33, respectively. This is just too clean and good, now I cannot live without this. :)
 - Container/window moving functionality
   - Added container moving support, but it only allows containers to move only inside of the set they're in.
-  - Trick to move a container from the current set to another set: Switch to another set that's intended with swayWorkroom,sh, and then switch back to the workspace that holds the intended container you want to move, move it to a certain workspace of the intended set, by mod+shift+N for example.
+  - Trick to move a container from the current set to another set: Switch to another set that's intended with swayWorkroom,sh, and then switch back to the workspace that holds the intended container you want to move *by clicking on the swaybar or waybar which is the bar you use*, move it to a certain workspace of the intended set, by mod+shift+N for example.
 
 # How to use
 1. Download the script, and put it to the directory of choice.
