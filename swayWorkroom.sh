@@ -13,14 +13,29 @@ workroomWorkspaceSwitchedFile="${swayScriptsTmpDir}/swayWorkroomWorkspaceSwitche
 
 workspaceToSwitch="$(cat ${workroomWorkspaceSwitchedFile})"
 
+printUsage_() {
+  echoGreen_() {
+    echo -e "\x1B[32m$*\x1B[0m"
+  }
+  cat <<EOF
+$(echoGreen_ "## Help Page ##")
+$(echoGreen_ "Usage:")
+  $(echo $(basename "$0")) [OPTION]
+  -s <N>|<M> Switch to workroom number N or named M
+  -x N       Navigate to N workspace in current workroom
+  -x --toN   Move focused container to workspace N
+EOF
+}
+
 case ${1} in
-  x) workroomToSwitch="$(cat ${workroomSwitchedFile})";;
-  *) echo "${1}" > ${workroomSwitchedFile}
+  -x) workroomToSwitch="$(cat ${workroomSwitchedFile})";;
+  -s) echo "${2}" > ${workroomSwitchedFile}
       workroomToSwitch="$(cat ${workroomSwitchedFile})"
       swaymsg "workspace ${workroomToSwitch}${workspaceToSwitch}";;
+  *) printUsage_; exit;;
 esac
 
-if [[ -v 2 && ! "${2}" = 0 ]]; then
+if [[ "${1}" == -x ]] && [[ "${2}" != 0 ]]; then
   case ${2} in
     1) swaymsg "workspace ${workroomToSwitch}1";
        echo "1" > ${workroomWorkspaceSwitchedFile};;
@@ -55,7 +70,7 @@ if [[ -v 2 && ! "${2}" = 0 ]]; then
   esac
 else
   #workspaceToSwitch="$(cat ${workroomWorkspaceSwitchedFile})"
-  if [ "${2}" = 0 ]; then
+  if [[ "${2}" == 0 ]]; then
     if [[ "${workroomToSwitch}" =~ ^[0-9]+$ ]]; then
       swaymsg "workspace $((${workroomToSwitch} + 1))0"; echo "0" > ${workroomWorkspaceSwitchedFile}
     else
