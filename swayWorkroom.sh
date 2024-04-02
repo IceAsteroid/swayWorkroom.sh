@@ -22,7 +22,7 @@ $(echoGreen_ "## Help Page ##")
 $(echoGreen_ "Usage:")
   $(echo $(basename "$0")) [OPTION]
   -s <N>|<M> Switch to workroom number N or named M
-  -x N       Navigate to N workspace in current workroom
+  -x N       Navigate to workspace N in current workroom
   -x --toN   Move focused container to workspace N
 EOF
 }
